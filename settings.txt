@@ -1,0 +1,8 @@
+запуск скрипта:
+python converter.py <путь_к_файлу> <целевой_формат> <папка_для_вывода>
+
+Примеры:
+python converter.py document.docx pdf ./output (с текстом и таблицами)
+python converter.py data_with_text.pdf word ./output (извлекает текст и таблицы в Word)
+python converter.py data_with_text.pdf json ./output (сохраняет и текст, и таблицы в JSON)
+python converter.py data_only_text.docx pdf ./output (конвертирует только текст в PDF)
