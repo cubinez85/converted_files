@@ -1,0 +1,32 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Virtual Environments ---
+venv/
+env/
+.venv/
+
+# --- Django ---
+staticfiles/
+db.sqlite3
+db.sqlite3-journal
+
+# --- Project Specific (Converted Files Project) ---
+.env
+.env.backup
+
+# Временные и выходные файлы конвертера
+input/
+output/
+media/
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
