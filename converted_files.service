@@ -1,0 +1,23 @@
+[Unit]
+Description=Gunicorn for Converted Files Django Project
+After=network.target
+
+[Service]
+User=cubinez85
+Group=www-data
+WorkingDirectory=/home/cubinez85/converted_files
+Environment="PATH=/home/cubinez85/converted_files/venv/bin"
+Environment="DJANGO_SETTINGS_MODULE=settings"
+ExecStart=/home/cubinez85/converted_files/venv/bin/gunicorn \
+          --workers 3 \
+          --bind 127.0.0.1:8085 \
+          --timeout 300 \
+          --access-logfile /var/log/gunicorn/access.log \
+          --error-logfile /var/log/gunicorn/error.log \
+          --log-level info \
+          wsgi:application 
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
